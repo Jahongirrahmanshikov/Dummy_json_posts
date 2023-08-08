@@ -1,9 +1,9 @@
 import 'package:http/http.dart';
 
 void main(List<String> args) async {
-  Uri uri = Uri.parse('https://dummyjson.com/posts/add');
+  Uri uri = Uri.parse('https://dummyjson.com/posts/2');
 
-  Response response = await post(uri, body: {
+  Response response = await put(uri, body: {
     "title": "Hello World",
     "body": "This is a dummy post",
     "userId": "1",
