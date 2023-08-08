@@ -32,7 +32,7 @@ class Post {
   String? body;
   int? userId;
   List<Object?>? tags;
-  int? reaction;
+  int? reactions;
 
   Post({
     this.id,
@@ -40,7 +40,7 @@ class Post {
     this.body,
     this.userId,
     this.tags,
-    this.reaction,
+    this.reactions,
   });
 
  factory Post.fromJson(Map<String, Object?> json) {
@@ -50,12 +50,12 @@ class Post {
     body: json['body'] as String?,
     userId: json['userId'] as int?,
     tags: (json['tags'] as List<Object?>?)?.toList(),
-    reaction: json['reaction'] as int?,
+    reactions: json['reactions'] as int?,
   );
 }
 
   @override
   String toString() {
-    return 'Post(id: $id, title: $title, body: $body, userId: $userId, tags: $tags, reaction: $reaction)';
+    return 'Post(id: $id, title: $title, body: $body, userId: $userId, tags: $tags, reaction: $reactions)';
   }
 }
