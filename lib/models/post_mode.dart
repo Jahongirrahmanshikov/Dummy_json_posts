@@ -31,7 +31,7 @@ class Post {
   String? title;
   String? body;
   int? userId;
-  List<Object?>? tags;
+  List<String>? tags;
   int? reactions;
 
   Post({
@@ -49,7 +49,7 @@ class Post {
     title: json['title'] as String?,
     body: json['body'] as String?,
     userId: json['userId'] as int?,
-    tags: (json['tags'] as List<Object?>?)?.toList(),
+    tags: (json['tags'] as List<String>?)?.toList(),
     reactions: json['reactions'] as int?,
   );
 }
